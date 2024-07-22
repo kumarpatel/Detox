@@ -15,7 +15,7 @@
     "test:ios-debug": "detox test --configuration ios.sim.debug",
     "test:ios-release": "detox test --configuration ios.sim.release",
     "test:android-debug": "detox test --configuration android.emu.debug",
-    "test:android-release": "detox test --configuration android.emu.release",
+    "test:android-release": "detox reset-lock-file; detox test --keepLockFile --configuration android.emu.release",
     "e2e:ios": "npm run build:ios-release && npm run test:ios-release",
     "e2e:android": "npm run build:android-release && npm run test:android-release",
     "podInstall:ios": "cd ios && bundle exec pod install",

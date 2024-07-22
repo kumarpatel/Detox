@@ -11,6 +11,7 @@ module.exports = {
     },
   },
   artifacts: {
+    rootDir: ".artifacts",
     plugins: {
       log: process.env.CI ? 'failing' : undefined,
       screenshot: process.env.CI ? 'failing' : undefined,
@@ -54,11 +55,8 @@ module.exports = {
       headless: Boolean(process.env.CI),
       gpuMode: process.env.CI ? 'off' : undefined,
       device: {
-        avdName: "Pixel_API_28"
+        avdName: "pixel_28_AOSP"
       },
-      utilBinaryPaths: [
-        "./cache/test-butler-app.apk"
-      ],
     },
     "genymotion.emulator.uuid": {
       type: "android.genycloud",
